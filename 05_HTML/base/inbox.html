@@ -5,8 +5,81 @@
     <title>Document</title>
 </head>
 <body>
-    <form action=" http://fe.it-academy.by/TestForm.php" method="get" target="_blank">"ваше имя"
-     <input type="text" name="IM">   
+    <h4>Простая форма поиска с вариантами:</h4>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search" target="_blank">
+        <fieldset>
+            <legend>Строка поиска </legend> 
+            <input type="text" name="text" maxlength="10">
+            <input type="submit" value="искать"> 
+            <legend>
+            <input type="radio" name="radio" value="на сайте" >на сайте
+            <input type="radio" name="radio" value="в google">в google
+            </legend>
+            <i>Длина запроса не более 10 символов
+            </i>
+        </fieldset>   
+    </form>
+    
+    <h4>Простая форма поиска с вариантами:</h4>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search" target="_blank">
+        <fieldset>
+            <legend>Строка поиска </legend> 
+            <input type="text" name="text" maxlength="10" placeholder="обязательное поле" autofocus>*
+            <input type="submit" value="искать" > 
+             <legend>
+            <input type="radio" name="radio" value="на сайте" >на сайте
+            <input type="radio" name="radio" value="в google">в google
+            </legend>
+            <i>* - Автофокус в поле поиска
+            </i>
+        </fieldset>   
+    </form>
+    <h4>Простая форма авторизации:</h4>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search2" target="_blank">
+        <fieldset>
+            <legend>Авторизуйтесь</legend>
+               <input type="text" id="login" name="login" placeholder="обязательное поле">*
+               <label for="login">Логин</label>
+               <br>
+               <input type="text" id="password" name="password" placeholder="обязательное поле">*
+               <label for="password">Пароль</label><br>
+               <input type="checkbox" name="check">Оставаться в системе
+               <br>
+               <input type="submit" value="Войти">
+               <i>* - обязательное поле</i>
+        </fieldset>  
+    </form>
+    <h4>Опрос(голосование):</h4>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search2" target="_blank">
+        <fieldset><legend>Как вам?</legend>
+            <label>
+            <input type="radio" name="poll" value="ничего">ничего</Label> <br>
+            <label>
+                <input type="radio" name="poll" value="неплохо">неплохо</Label> <br>
+            <label>
+                <input type="radio" name="poll" value="хорошо">хорошо</Label> <br>
+            <label>
+                <input type="radio" name="poll" value="супер">супер</Label> <br>
+            <input type="submit" name="result" value="отправить">
+            <p><i> Есть скрытое поле
+                name=date_voite, value="2013.12.31"</i></p> 
+        </fieldset>
+        
+    </form>
+    <h4>Отзыв:</h4>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search2" target="_blank">
+        <fieldset>
+            <legend>Оставьте Ваш отзыв</legend>
+               <input type="text" id="name" name="login" >*
+               <label for="name">Имя</label>
+               <br>
+               <input type="text" id="pas" name="password">*
+               <label for="pas">E-mail</label><br>
+               <input type="checkbox" name="check">Оставаться в системе
+               <br>
+               <input type="submit" value="Войти">
+               <i>* - обязательное поле</i>
+        </fieldset>  
     </form>
 </body>
 </html>
