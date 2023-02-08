@@ -50,7 +50,7 @@
         </fieldset>  
     </form>
     <h4>Опрос(голосование):</h4>
-    <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search2" target="_blank">
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" name="poll" target="_blank">
         <fieldset><legend>Как вам?</legend>
             <label>
             <input type="radio" name="poll" value="ничего">ничего</Label> <br>
@@ -67,19 +67,21 @@
         
     </form>
     <h4>Отзыв:</h4>
-    <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search2" target="_blank">
+    <form action="http://fe.it-academy.by/TestForm.php" method="post" name="E-mail target="_blank">
         <fieldset>
             <legend>Оставьте Ваш отзыв</legend>
-               <input type="text" id="name" name="login" >*
-               <label for="name">Имя</label>
-               <br>
-               <input type="text" id="pas" name="password">*
-               <label for="pas">E-mail</label><br>
-               <input type="checkbox" name="check">Оставаться в системе
-               <br>
-               <input type="submit" value="Войти">
-               <i>* - обязательное поле</i>
+            <input type="text" id="name" name="login" placeholder="Обязательное поле">*
+            <label for="name">Имя</label>
+            <br>
+            <input type="email" name="email" placeholder="Обязательное поле">*E-mail <br>
+            <textarea name="text_area" cols="15" rows="2">форма отправки</textarea><br>
+            <input type="submit" name="go" value="отправить">
+            <p><i>* - обязательное поле
+                поле email - с проверкой
+                метод POST
+                </i></p>
         </fieldset>  
+        
     </form>
 </body>
 </html>
