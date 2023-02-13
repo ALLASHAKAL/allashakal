@@ -5,18 +5,21 @@
     <title>Document</title>
 </head>
 <body>
+
     <h4>Простая форма поиска с вариантами:</h4>
     <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search" target="_blank">
         <fieldset>
             <legend>Строка поиска </legend> 
+
             <input type="text" name="text" maxlength="10">
             <input type="submit" value="искать"> 
+
             <legend>
             <input type="radio" name="radio" value="на сайте" >на сайте
             <input type="radio" name="radio" value="в google">в google
             </legend>
-            <i>Длина запроса не более 10 символов
-            </i>
+
+            <i>Длина запроса не более 10 символов</i>
         </fieldset>   
     </form>
     
@@ -24,24 +27,29 @@
     <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search" target="_blank">
         <fieldset>
             <legend>Строка поиска </legend> 
+
             <input type="text" name="text" maxlength="10" placeholder="обязательное поле" autofocus>*
             <input type="submit" value="искать" > 
-             <legend>
+             
+            <legend>
             <input type="radio" name="radio" value="на сайте" >на сайте
             <input type="radio" name="radio" value="в google">в google
             </legend>
-            <i>* - Автофокус в поле поиска
-            </i>
+
+            <i>* - Автофокус в поле поиска</i>
         </fieldset>   
     </form>
+
     <h4>Простая форма авторизации:</h4>
     <form action="http://fe.it-academy.by/TestForm.php" method="get" name="search2" target="_blank">
         <fieldset>
             <legend>Авторизуйтесь</legend>
-               <input type="text" id="login" name="login" placeholder="обязательное поле">*
+
+               <input type="text" id="login" name="login" placeholder="обязательное поле"*>
                <label for="login">Логин</label>
                <br>
-               <input type="text" id="password" name="password" placeholder="обязательное поле">*
+
+               <input type="text" id="password" name="password" placeholder="обязательное поле"*>
                <label for="password">Пароль</label><br>
                <input type="checkbox" name="check">Оставаться в системе
                <br>
@@ -49,28 +57,28 @@
                <i>* - обязательное поле</i>
         </fieldset>  
     </form>
+
     <h4>Опрос(голосование):</h4>
     <form action="http://fe.it-academy.by/TestForm.php" method="get" name="poll" target="_blank">
         <fieldset><legend>Как вам?</legend>
             <label>
-            <input type="radio" name="poll" value="ничего">ничего</Label> <br>
+                 <input type="radio" name="poll" value="ничего">ничего</Label> <br>
             <label>
-                <input type="radio" name="poll" value="неплохо">неплохо</Label> <br>
+                 <input type="radio" name="poll" value="неплохо">неплохо</Label> <br>
             <label>
-                <input type="radio" name="poll" value="хорошо">хорошо</Label> <br>
+                 <input type="radio" name="poll" value="хорошо">хорошо</Label> <br>
             <label>
-                <input type="radio" name="poll" value="супер">супер</Label> <br>
+                 <input type="radio" name="poll" value="супер">супер</Label> <br>
             <input type="submit" name="result" value="отправить">
-            <p><i> Есть скрытое поле
-                name=date_voite, value="2013.12.31"</i></p> 
-        </fieldset>
-        
+            <p><i> Есть скрытое поле name=date_voite, value="2013.12.31"</i></p> 
+        </fieldset>  
     </form>
+
     <h4>Отзыв:</h4>
     <form action="http://fe.it-academy.by/TestForm.php" method="post" name="E-mail target="_blank">
         <fieldset>
             <legend>Оставьте Ваш отзыв</legend>
-            <input type="text" id="name" name="login" placeholder="Обязательное поле">*
+            <input type="text" id="name" name="login" placeholder="Обязательное поле"*>
             <label for="name">Имя</label>
             <br>
             <input type="email" name="email" placeholder="Обязательное поле">*E-mail <br>
