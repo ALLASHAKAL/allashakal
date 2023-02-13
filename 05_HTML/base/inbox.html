@@ -28,7 +28,7 @@
         <fieldset>
             <legend>Строка поиска </legend> 
 
-            <input type="text" name="text" maxlength="10" placeholder="обязательное поле" autofocus>*
+            <input type="text" name="text" maxlength="10" placeholder="обязательное поле" autofocus> &#42;
             <input type="submit" value="искать" > 
              
             <legend>
@@ -45,15 +45,15 @@
         <fieldset>
             <legend>Авторизуйтесь</legend>
 
-               <input type="text" id="login" name="login" placeholder="обязательное поле"*>
+               <input type="text" id="login" name="login" placeholder="обязательное поле">&#42;
                <label for="login">Логин</label>
                <br>
-
-               <input type="text" id="password" name="password" placeholder="обязательное поле"*>
+               
+               <input type="text" id="password" name="password" placeholder="обязательное поле">&#42;
                <label for="password">Пароль</label><br>
                <input type="checkbox" name="check">Оставаться в системе
                <br>
-               <input type="submit" value="Войти">
+               <input type="submit" value="Войти"><br>
                <i>* - обязательное поле</i>
         </fieldset>  
     </form>
@@ -69,26 +69,58 @@
                  <input type="radio" name="poll" value="хорошо">хорошо</Label> <br>
             <label>
                  <input type="radio" name="poll" value="супер">супер</Label> <br>
+                 <input type="hidden" name="date_voite" value="2013.12.31"> 
+                 <!--скрытая строка--> 
             <input type="submit" name="result" value="отправить">
             <p><i> Есть скрытое поле name=date_voite, value="2013.12.31"</i></p> 
         </fieldset>  
     </form>
 
     <h4>Отзыв:</h4>
-    <form action="http://fe.it-academy.by/TestForm.php" method="post" name="E-mail target="_blank">
+    <form action="http://fe.it-academy.by/TestForm.php" method="post" name="E-mail" target="_blank">
         <fieldset>
             <legend>Оставьте Ваш отзыв</legend>
-            <input type="text" id="name" name="login" placeholder="Обязательное поле"*>
-            <label for="name">Имя</label>
-            <br>
-            <input type="email" name="email" placeholder="Обязательное поле">*E-mail <br>
-            <textarea name="text_area" cols="15" rows="2">форма отправки</textarea><br>
-            <input type="submit" name="go" value="отправить">
+            <input type="text" id="name" name="login" placeholder="Обязательное поле">&#42;Имя<br>
+              
+               <input type="email" name="email" placeholder="Обязательное поле">*E-mail <br>
+               <textarea name="text_area" cols="15" rows="2">форма отправки</textarea><br>
+               <input type="submit" name="go" value="отправить">
             <p><i>* - обязательное поле
                 поле email - с проверкой
                 метод POST
                 </i></p>
         </fieldset>  
+    </form>
+
+    <h4>Выпадающий и мультисписки:</h4>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" name="city" target="_blank">
+         <fieldset>
+            <legend>Города РБ</legend>
+            <select name="list" id="list">
+                <option value="1">Минск</option>
+                <option value="2">Витебск</option>
+                <Option value="0" selected>Брест</Option>
+            </select>
+
+            <select name="list" id="list">
+
+                <optgroup label="Города РБ">
+                    <option value="1">Брест</option>
+                    <option value="2">Минск</option>
+                    <option value="3">Витебск</option>
+                </optgroup>
+
+                <optgroup label="Города России">
+                    <option value="1">Москва</option>
+                    <option value="2">Рязань</option>
+                    <option value="3">Магадан</option>
+                </optgroup>
+
+                <input type="submit" value="ok">
+
+            </select>
+         </fieldset>
+
     </form>
 </body>
 </html>
