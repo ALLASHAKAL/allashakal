@@ -157,13 +157,13 @@
                     <h4>Выпадающий и мультисписки:</h4>
                     <fieldset>
                          <legend>Города РБ</legend>
-                         <select name="list" id="list">
+                         <select name="City">
                              <option value="1">Минск</option>
                              <option value="2">Витебск</option>
                              <option value="0" selected>Брест</option>
                          </select>
 
-                        <select name="list" id="list">
+                        <select name="City2">
                              <optgroup label="Города РБ">
                                  <option value="1">Брест</option>
                                  <option value="2">Минск</option>
@@ -187,8 +187,12 @@
                       method="post"
                       enctype="multipart/form-data" >
                      <h4>Загрузка фаайла на сервер:</h4>
-                    
-
+                     <fieldset>
+                         <legend>Upload</legend>
+                         <p>Файл:</p>
+                         <input type="File" name="file_filed" dir="ltr" value="choose file" >
+                         <input type="submit" name="add" value="Загрузить">
+                    </fieldset>
                 </form>
             </td>
          </tr>
