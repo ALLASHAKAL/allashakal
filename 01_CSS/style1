@@ -109,7 +109,7 @@ for cntr in range(0,10):
       и фигурные «{» скобки как в других языках программирования, а отступы.
     </p>
 
-    <table width="100%">
+    <table width="1400px">
       <tr>
         <td align="left">
         <a href="#">
