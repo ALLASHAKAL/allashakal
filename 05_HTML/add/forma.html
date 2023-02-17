@@ -9,23 +9,23 @@
 </head>
 
 <body>
-  <h3>Заполните анкету</h3>
+  <h1 align="center">Заполните анкету</h1>
   <Form action="http://fe.it-academy.by/TestForm.php" method="post">
     <fieldset>
       <legend>Личные данные</legend>
-      <input type="text" name="surname" placeholder="фамилия" width="25" pattern="[А-Яа-яЁё]" autofocus>
-      <input type="text" name="lastname" placeholder="Имя" width="20" pattern="[А-Яа-яЁё]">
-      <input type="text" name="fname" placeholder="Имя" width="24" pattern="[А-Яа-яЁё]">
+      <input type="text" name="surname" placeholder="фамилия" width="25" pattern="[А-Яа-яЁё]" autofocus><br>
+      <input type="text" name="lastname" placeholder="Имя" width="20" pattern="[А-Яа-яЁё]"><br>
+      <input type="text" name="fname" placeholder="Отчество" width="24" pattern="[А-Яа-яЁё]"><br>
 
       <fieldset>
         <legend>Паспортные данные</legend>
-        <input type="text" name="seria" pattern="[A-Z]{2,}" placeholder="AA" width="2">
+        <input type="text" name="seria" pattern="[A-Z]{2,}" placeholder="AA" >
         <input type="text" name="number" width="7" pattern="" placeholder="1234567">
       </fieldset>
 
       <fieldset>
         <legend>Дата Рождения</legend>
-        <input type="text" name="year" pattern="[0-9]{4,}">
+        <input type="text" name="year" pattern="[0-9]{4,}"><br>
         <select name="month">
           <option value="1" selected>Январь</option>
           <option value="2">Февраль</option>
@@ -39,8 +39,8 @@
           <option value="10">Октябрь</option>
           <option value="11">Ноябрь</option>
           <option value="12">Декабрь</option>
-        </select>
-        <input type="number" name="nomer" pattern="(^[1-9]{1}$|^[1-4]{1}[0-9]{1}$|^31$)"> <!--шаг один доделать-->
+        </select><br>
+        <input type="number" name="nomer" pattern="(^[1-9]{1}$|^[1-4]{1}[0-9]{1}$|^31$)" step="1"> 
       </fieldset>
 
       <select name="nationalities">
@@ -48,7 +48,7 @@
         <option value="Rus">RUS</option>
         <option value="UA">UA</option>
         <option value="Lt">LT</option>
-      </select>
+      </select><br>
       <textarea name="Adress">Адрес</textarea>
 
     </fieldset>
@@ -71,25 +71,48 @@
      <fieldset>
       <legend>Домашние животные</legend>
          <select name="pet" multiple>
-           <optgroup label="parrot">
+           <optgroup label="Попугаи">
              <option value="Volnist">Волнистые</option>
              <option value="Ara">Ара</option>
              <option value="Nerazl">Неразлучник</option>
            </optgroup>
-           <optgroup label="Fish">
+           <optgroup label="Рыба">
              <option value="karas">Карась</option>
              <option value="okun">Окунь</option>
              <option value="Osetr">Осетр</option>
            </optgroup>
-           <optgroup label="Bird">
+           <optgroup label="Птицы">
                <option value="Voron">стая ворон</option>
                <option value="Aist">Аист</option>
                <option value="Arh">Археоптерикс</option>
            </optgroup>
          </select>
      </fieldset>
+
      <fieldset>
        <legend>Данные для входа и восстановления пароля</legend>
+          <input type="text" name="login" placeholder="Логин" width="20" pattern="[A-Za-z]{5,}" /><br>
+          <input type="text" name="password" placeholder="Пароль" width="20" pattern="[A-Za-z]{10,}" autocomplete="off" />         
+     </fieldset>
+
+     <fieldset>
+       <legend>Координаты</legend>
+         <input type="email" name="email" placeholder="Введите адрес почты" pattern="(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})" /><br>
+         <input type="url" name="url" placeholder="введите адрес сайта" pattern="^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" >
+     </fieldset> 
+
+     <fieldset>
+       <legend>Цифры</legend>
+        <input type="number" min="-2.5" max="2.5" step="0.1"><br>
+        <input type="range" min="1" max="10">
+     </fieldset>
+
+     <fieldset>
+       <legend>Кнопки управления</legend>
+         <input type="submit" value="Отправить">
+         <input type="reset" value="Сбросить"><br>
+         <input type="image" name="image" src="email.jpg">
+         <label for="image">-при нажатии на эту кнопку ничего не происходит" </label>
      </fieldset>
 
   </Form>
