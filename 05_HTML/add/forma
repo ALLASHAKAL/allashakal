@@ -1,19 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Documentw</title>
-  </head>
-  <body> 
-    <form action="http://fe.it-academy.by/TestForm.php"
-                   method="get"
-                  name="search">
-        <h1>заполните анкету</h1>
-        <fieldset>
-             <legend>Строка поиска</legend>
-                <input type="text" name="sur" pattern="[А-Яа-яЁё]" placeholder="Фамилия" autofocus/>
-                <input type="text" name="name"  pattern="[А-Яа-яЁё]" placeholder="Имя"/>
 
-        </fieldset>
-    </form>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 
+<body>
+  <h3>Заполните анкету</h3>
+  <Form action="http://fe.it-academy.by/TestForm.php" method="post">
+    <fieldset>
+      <legend>Личные данные</legend>
+      <input type="text" name="surname" placeholder="фамилия" width="25" pattern="[А-Яа-яЁё]" autofocus>
+      <input type="text" name="lastname" placeholder="Имя" width="20" pattern="[А-Яа-яЁё]">
+      <input type="text" name="fname" placeholder="Имя" width="24" pattern="[А-Яа-яЁё]">
+
+      <fieldset>
+        <legend>Паспортные данные</legend>
+        <input type="text" name="seria" pattern="[A-Z]{2,}" placeholder="AA" width="2">
+        <input type="text" name="number" width="7" pattern="" placeholder="1234567">
+      </fieldset>
+
+      <fieldset>
+        <legend>Дата Рождения</legend>
+        <input type="text" name="year" pattern="[0-9]{4,}">
+        <select name="month">
+          <option value="1" selected>Январь</option>
+          <option value="2">Февраль</option>
+          <option value="3">Март</option>
+          <option value="4">Апрель</option>
+          <option value="5">Май</option>
+          <option value="6">Июнь</option>
+          <option value="7">Июль</option>
+          <option value="8">Август</option>
+          <option value="9">Сентябрь</option>
+          <option value="10">Октябрь</option>
+          <option value="11">Ноябрь</option>
+          <option value="12">Декабрь</option>
+        </select>
+        <input type="number" name="nomer" pattern="(^[1-9]{1}$|^[1-4]{1}[0-9]{1}$|^31$)"> <!--шаг один доделать-->
+      </fieldset>
+
+      <select name="nationalities">
+        <option value="blr" selected>BLR</option>
+        <option value="Rus">RUS</option>
+        <option value="UA">UA</option>
+        <option value="Lt">LT</option>
+      </select>
+      <textarea name="Adress">Адрес</textarea>
+
+    </fieldset>
+    <Fieldset>
+      <legend>Хобби</legend>
+      <Label>
+        <input type="checkbox" name="fishing" value="fishing">Рыбалка
+      </Label><br>
+      <label>
+        <input type="checkbox" name="astronomy" value="astronomy">Астрономия
+      </label><br>
+      <label>
+        <input type="checkbox" name="diving" value="diving">Дайвинг
+      </label><br>
+      <label>
+        <input type="checkbox" name="stamp" value="stamp">Марки
+      </label><br>
+    </Fieldset>
+
+     <fieldset>
+      <legend>Домашние животные</legend>
+         <select name="pet" multiple>
+           <optgroup label="parrot">
+             <option value="Volnist">Волнистые</option>
+             <option value="Ara">Ара</option>
+             <option value="Nerazl">Неразлучник</option>
+           </optgroup>
+           <optgroup label="Fish">
+             <option value="karas">Карась</option>
+             <option value="okun">Окунь</option>
+             <option value="Osetr">Осетр</option>
+           </optgroup>
+           <optgroup label="Bird">
+               <option value="Voron">стая ворон</option>
+               <option value="Aist">Аист</option>
+               <option value="Arh">Археоптерикс</option>
+           </optgroup>
+         </select>
+     </fieldset>
+     <fieldset>
+       <legend>Данные для входа и восстановления пароля</legend>
+     </fieldset>
+
+  </Form>
+
+</body>
+
+</html>
