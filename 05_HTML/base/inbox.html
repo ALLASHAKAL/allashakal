@@ -190,7 +190,7 @@
                      <fieldset>
                          <legend>Upload</legend>
                          <label >Файл:</label><br>
-                         <input type="file" name="file_Field" dir="ltr"> <br>
+                         <input type="file" name="file_Field" dir="ltr" lang="enm"> <br>
                          <label>Срок хранениня(года)</label><br>
                          <input type="number" size="5" name="Years">
                          <input type="submit"value="Загрузить">
@@ -206,7 +206,7 @@
                         <legend>Строка поиска</legend> 
                              <input type="text" name="seach" placeholder="Только русские буквы" pattern="^[А-Яа-яЁё\s]+$" ><br>
                              <i>Телефонный номер в формате +ХХХ-ХХ-ХХХХХХХ, где Х - любое число</i>
-                             <input type="tel"pattern="\+3\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+                             <input type="tel"pattern=" ^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$">
                              <input type="submit" value="Проверить">
                     </fieldset>
                 </form>
