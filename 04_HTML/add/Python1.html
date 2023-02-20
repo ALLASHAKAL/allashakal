@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p><img src="picture/Icon-Python.7bb116a5.png" 
+         alt="python" 
+         align="right" 
+         title="logo"/>
+    </p>
+    
+    <h1>HOW-TO: Программа на Python, Часть 1</h1>
+
+    <ul>
+       <li>
+           <em><a href="Python1.html">Программа на Python — часть 1</a></em>
+       </li>
+       <li>
+           <em><a href="Python2.html">Программа на Python — часть 2</a></em>
+       </li>
+       <li>
+           <em><a href="Python3.html">Программа на Python — часть 3</a></em>
+      </li>
+    </ul>
+
+    <h2 id="con">Содержание</h2>
+
+    <h3>HOW-TO: Программа на Python, Часть 1</h3>
+
+    <ul>
+      <li><a href="#top">Наша первая программа</a></li>
+      <li><a href="#for">Пример цикла For</a></li>
+    </ul>
+
+    <p>
+      Из множества существующих языков программирования Python — один из самых
+      лёгких в изучении. Он создан в конце 80-х годов XX века, но с тех пор он
+      сильно изменился. Хотя Python входит в состав большинства дистрибутивов
+      Linux, на него часто не обращают внимания при выборе языка для изучения. В
+      этой статье мы рассмотрим создание консольных приложений, а в следующей —
+      программирование графических интерфейсов (GUI). Давайте создадим простую
+      программу прямо сейчас.
+    </p>
+
+    <h2 id="top">Наша первая программа</h2>
+
+    <p><a href="#con">К содержанию</a></p>
+
+    <p>
+      Наберём код в текстовом редакторе (например, в <strong>gedit</strong>).
+      Потом мы разберёмся, что делает каждая строка и пойдём дальше.
+    </p>
+
+    <p>Введите эти 4 строки:</p>
+    <br />
+
+    <pre><code>
+#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"
+    </code></pre>
+
+    <p>
+      Это всё. Сохраните файл как <strong>hello.py</strong> в любом месте. Я
+      предлагаю сохранить его в папке <strong>python_examples</strong> в
+      домашнем каталоге. Этот пример показывает, как просто написать программу
+      на Python. Для запуска программы нужно сделать её файл исполняемым. Для
+      этого введите в терминале
+    </p>
+
+    <p>
+      <strong> <samp> chmod +x hello.py</samp></strong>
+    </p>
+
+    <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+    <br />
+
+    <pre><code>
+greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$
+    </code></pre>
+
+    <p>Вот и всё.</p>
+
+    <h2 id="for">Пример цикла For</h2>
+
+    <p><a href="#con">К содержанию</a></p>
+
+    <p>
+      Теперь давайте рассмотрим пример программирования цикла. Запустите
+      текстовый редактор и наберите следующую программу:
+    </p>
+    <br />
+
+    <pre><code>
+#!/usr/bin/env python
+for cntr in range(0,10):
+&nbsp; print cntr</code></pre>
+
+    <p>
+      <i> Не забудьте поставить символ табуляции перед строкой «print cntr».</i>
+      Это важно. В Python для указания на блоки кода используются не круглые «(»
+      и фигурные «{» скобки как в других языках программирования, а отступы.
+    </p>
+
+    <table width="100%">
+      <tr>
+        <td align="left" alt="Back"
+        title="back page">
+        <a href="#">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <g id="Layer_1">
+             <title>Layer 1</title>
+             <path transform="rotate(179.921 11 11.6242)" stroke="#0fffff" id="svg_1" d="m10.2715,17.48106l2.54073,-3.61749l-4.91239,0l-4.91237,0l0,-2.2394l0,-2.2394l4.85602,0c2.67081,0 4.85602,-0.1135 4.85602,-0.25223c0,-0.13872 -1.06324,-1.7666 -2.36275,-3.61749l-2.36276,-3.36526l2.18391,0l2.1839,0l3.33532,4.74173l3.33532,4.74173l-3.34171,4.73265l-3.34171,4.73265l-2.29913,0l-2.29913,0l2.54074,-3.61749l0,0z" fill="#000"/>
+            </g>
+           </svg>
+        </a>
+        </td>
+        <td align="center" alt="start page" 
+        title="start page">
+        <a href="#">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <g id="Layer_1">
+             <title>Layer 1</title>
+             <path id="svg_1" d="m17.01594,8.99466l-2.07382,-2.06831l0,-4.93976l-1.77785,0l0,3.16663l-4.14832,-4.13729l-8,7.97872l1.9045,-0.04526l0,8.06653l12.10633,0l0,-8.02128l1.98916,0zm-8,6.86756l-3.95056,0l0,-4.72833l3.95056,0l0,4.72833zm3.83813,-2.02643l-2.596,0l0,-2.73027l2.596,0l0,2.73027z" stroke="#00ff00" fill="#010c00"/>
+            </g>
+           </svg>
+        </a>
+        </td>
+        <td align="right" alt="next page" 
+        title="next page">
+        <a href="python2.html">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <g id="Layer_1">
+             <title>Layer 1</title>
+             <path id="svg_1" d="m9.18176,16.31099l2.85387,-3.81818l-5.51782,0l-5.51781,0l0,-2.36364l0,-2.36364l5.45451,0c2.99998,0 5.45451,-0.1198 5.45451,-0.26622c0,-0.14642 -1.19428,-1.8646 -2.65395,-3.81818l-2.65396,-3.55196l2.45307,0l2.45306,0l3.74638,5.00479l3.74638,5.00479l-3.75357,4.99521l-3.75357,4.99521l-2.58249,0l-2.5825,0l2.85388,-3.81818l0,0z" stroke="#00e5ff" fill="#010c00"/>
+            </g>
+           </svg>
+        </a>
+      </td>
+      </tr>
+      </table>
+  </body>
+</html>
