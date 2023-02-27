@@ -4,29 +4,43 @@
     <meta charset="UTF-8" />
     <title>Document</title>
     <style>
-        div.menu {
-            width: 100px;  
-            height: 100px;
-        }
-        div.menu>{ 
-            background-color: #d3d3d3;border: solid black 1px;position: relative; cursor: pointer;
-        }
-        div.day{
-            width: 150px; display: none 
-        }
-        div.day > div {
-             background-color: cyan; border: solid blue 1px; cursor: pointer
-         }
-         div.menu > div:hover div.day {
-             display: block; position: absolute; left: 80%; top: 90%; z-index:1; 
-        }
-        
-    
+      div.menu {
+        width: auto;
+        height: auto;
+      }
+      div.menu > div {
+        width: 150px;
+        height: 30px;
+        border-radius: 3px;
+        float: left;
+        background-color: #d3d3d3;
+        text-align: center;
+        display: block;
+        border: solid rgba(103, 99, 99, 0.622) 2px;
+        position: relative;
+        cursor: pointer;
+      }
+      div.day {
+        width: 150px;
+        height: 30px;
+        display: none;
+      }
+      div.day > div {
+        border-radius: 3px;
+        background-color: #d3d3d3;
+        border: solid rgba(103, 99, 99, 0.622) 2px;
+        cursor: pointer;
+      }
+      div.menu > div:hover div.day {
+        display: block;
+        position: absolute;
+        top: 30px;
+        z-index: 1;
+      }
     </style>
   </head>
   <body>
     <div class="menu">
-
       <div>
         Понедельник
         <div class="day">
@@ -80,7 +94,6 @@
           <div>Ужин</div>
         </div>
       </div>
-
     </div>
   </body>
 </html>
