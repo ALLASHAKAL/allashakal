@@ -5,7 +5,7 @@
     <title>Document</title>
     <style>
       div.menu > div {
-         width: 150px;
+        width: 150px;
         height: 30px;
         border-radius: 3px;
         float: left;
@@ -15,7 +15,7 @@
         border: solid rgba(103, 99, 99, 0.622) 2px;
         position: relative;
         cursor: pointer;
-      }
+            }
       div.day {
         display: none;
       }
@@ -31,10 +31,13 @@
         display: block;
         position: absolute;
         top: 30px;
-        z-index: 1;
       }
       @media all and (max-width: 898px) {
+        .menu{
+          width: 450px;
+        }
         div.menu > div{
+         
           float:none;
         }
         div.menu > div:hover div.day { display: block; position: absolute; left: 100%;}
