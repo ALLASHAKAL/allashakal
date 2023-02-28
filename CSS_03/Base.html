@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <title>Document</title>
     <style>
-      *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body{ width: 1000px;}
-     
       div.menu > div {
          width: 150px;
         height: 30px;
@@ -40,10 +33,11 @@
         top: 30px;
         z-index: 1;
       }
-      @media all and (max-width: 222px) {
+      @media all and (max-width: 898px) {
         div.menu > div{
           float:none;
         }
+        div.menu > div:hover div.day { display: block; position: absolute; left: 100%;}
 
 
       }
