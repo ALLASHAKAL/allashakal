@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Base3</title>
+    <style>
+      
+      .wrap {
+        background-color: #dbdbdb;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .navig {
+        width: 15em;
+        background-color: #cbcccb;
+        align-self: flex-start;
+      }
+      .content {
+        background-color: #aaaaaa;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        justify-content: space-between;
+      }
+
+      .footer {
+        background-color: #cbcccb;
+        height: auto;
+      }
+      .clear {
+        clear: both;
+      }
+      .icon {
+        display: flex;
+        justify-content: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="navig">
+        <h3>Блок навигации</h3>
+        <ul>
+          <li>Ширина 15em</li>
+          <li>Должен присутствовать цвет фона</li>
+          <li>Располагается слева</li>
+          <li>
+            Блок навигации наполните контентом достаточным,чтоб по высоте он
+            начинал захватывать вторую статью,как показано в данном примере
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div>
+          <h3>Статья 1</h3>
+          <p>
+            Размер блока: <br />
+            Занимает всю доступную ширину <br />
+            Должен присутствовать цвет фона <br />
+            Во всех "статьях" сделайте отступ снизу от соседей равным 2em,при
+            помощи свойство margin-bottom.
+          </p>
+        </div>
+
+        <div>
+          <h3>Cтатья 2</h3>
+          <p>
+            Размер блока: <br />
+            Занимает всю доступную ширину <br />
+            Должен присутствовать цвет фона <br />
+            Во всех "статьях" сделайте отступ снизу от соседей равным 2em, при
+            помощи свойство margin-bottom. Картинка вставлена при помощи
+            тега,плавание организовано по правому краю внутри данной статьи для
+            этой картинки.
+          </p>
+        </div>
+        <div class="clear"></div>
+        <div class="icon"><img src="img/icon_mail.png" alt="letter" /></div>
+      </div>
+    </div>
+    <div class="footer">
+      Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется
+      помещенным внутрь контентом.
+    </div>
+  </body>
+</html>
