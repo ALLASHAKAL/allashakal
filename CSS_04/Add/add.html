@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .desk{
+        table{
             width: 800px;
             height: 800px;
-            border: solid black;
+            border: solid black 10px;
             border-style: solid black;
+            counter-reset: counter1 65;
+            font-size: 5em;
+            text-align: center;
+            
         }
-        .desk tr:nth-child(odd) td:nth-child(odd) {
-            background: black;}
-        .desk tr:nth-child(even) td:nth-child(even){
-            background-color: black;
+        tr:nth-child(odd) td:nth-child(odd) {
+            background: black; color: white;}
+            
+        tr:nth-child(even) td:nth-child(even){
+            background-color: black; color: white;
+        }
+        td::before{
+            counter-increment: counter1 -1;
+            content: counter(counter1);
         }
 
 
@@ -22,7 +31,7 @@
 
 </head>
 <body>
-    <table class="desk">
+    <table>
         <tr>
             <td></td>
             <td></td>
