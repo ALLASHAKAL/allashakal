@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        th {
+            background-color: grey;
+            border-style: dotted;
+        }
+
+        td {
+            border-color:  rgb(170, 168, 168);
+        }
+
+        td:first-child {
+            font-weight: bold;
+        }
+
+        tr:nth-child(2n+1) {
+            background-color: rgb(228, 220, 220);
+            
+        }
+        tr:last-child{text-align: center; background: white;}
+        tr:hover {
+            background-color: blue
+        }
+        
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr class="row">
+            <th>ФИО</th>
+            <th>Пол</th>
+            <th>Должность</th>
+            <th>Дата Рождения</th>
+            <th>Данные 01</th>
+            <th>Данные 02</th>
+        </tr>
+        <tr class="row">
+            <td>Иванов Иван Иванович</td>
+            <td>М</td>
+            <td>Начальник</td>
+            <td>01.01.1960</td>
+            <td>4567</td>
+            <td>3453</td>
+        </tr>
+
+        <tr class="row">
+            <td>Петрова Илонна Петровна</td>
+            <td>Ж</td>
+            <td>Секретарь</td>
+            <td>01.01.1989</td>
+            <td>98795</td>
+            <td>46523</td>
+        </tr >
+
+        <tr class="row">
+            <td>Сидоров Илья Игоревич</td>
+            <td>М</td>
+            <td>Бухгалтер</td>
+            <td>01.01.1979</td>
+            <td>743434</td>
+            <td>987979</td>
+        </tr>
+        <tr class="row">
+            <td>Пупин Федор Федорович</td>
+            <td>М</td>
+            <td>Водитель</td>
+            <td>01.01.1963</td>
+            <td>74323434</td>
+            <td>9232379</td>
+        </tr>
+
+        <tr class="row">
+            <td>Крупин Сергей Иванович</td>
+            <td>М</td>
+            <td>Водитель 2</td>
+            <td>01.01.1983</td>
+            <td>3234534</td>
+            <td>923123379</td>
+        </tr>
+        <tr class="row">
+            <td colspan="6">ДАННЫЕ О СОТРУДНИКАХ</td>
+        </tr>
+    </table>
+    <button>Нет скрытых строк</button>
+    
+   	
+    <script src="//code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function ($) {
+
+$('.row').on('click', function () {
+    $(this).hide();
+    $('button').text('Показать все строки');
+    
+})
+
+$(':button').on('click', function () {
+    $(this).text('Нет скрытых строк');
+    $('.row').show();
+})
+})
+    </script>
+
+
+</body>
+
+</html>
